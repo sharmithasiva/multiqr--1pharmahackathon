@@ -12,13 +12,13 @@ multiqr-hackathon/
 ├── README.md                        # Setup & usage instructions
 ├── requirements.txt                 # Python dependencies
 ├── train.py                         # YOLOv8 training script
-├── infer.py                         # Inference script saves bounding box cooredinated as JSON ( Stage 1 ) 
-├── evaluate.py                      # Evaluate the model predictions using metrics like accuracy, f1 score, recall etc.
-├── visualise.py                     # Visualise predicted bounding boxes on the test data (50 images)
-├── decode.py                        # decoding and classification (Stage 2)
+├── infer.py                         # Inference script (Stage 1 → outputs JSON)
+├── evaluate.py                      # Evaluate model predictions (optional)
+├── visualise.py                     # Visualise predicted bounding boxes
+├── decode.py                        # Decoding & classification (Stage 2)
 │
 ├── outputs/                         
-│   ├── submission_detection_1.json  # Required output file (Stage 1)
+│   ├── submission_detection_1.json  # Output file (Stage 1)
 │   └── submission_decoding_2.json   # Output file (Stage 2, bonus)
 │
 └── src/
@@ -27,14 +27,15 @@ multiqr-hackathon/
     │   │   ├── train/               # Training images
     │   │   ├── val/                 # Validation images
     │   │   └── test/                # Test images
-    │   └── labels/
-    │       ├── train/               # YOLO txt annotations for train
-    │       ├── val/                 # YOLO txt annotations for val
-    │       └── test/                # YOLO txt annotations for test 
-    |   ├── data.yaml                # 
+    │   ├── labels/
+    │   │   ├── train/               # YOLO .txt annotations for train
+    │   │   ├── val/                 # YOLO .txt annotations for val
+    │   │   └── test/                # YOLO .txt annotations for test
+    │   └── data.yaml                # Dataset config (paths, classes)
     │
-    ├── models/                       # Trained weights
-        ├── best.py     
+    ├── models/                      
+    │   └── best.pt                  # Trained YOLO model weights
+
 
 data.yaml : config file that contains datat information like path, classes etc.
 
