@@ -68,6 +68,8 @@ Note :  The annotations can be found in src/data/labels/
 ## Setup Instructions
 
 1. Clone the repository
+          or
+   Download the zipped folder and extract the files. 
    
    ```bash
    git clone https://github.com/sharmithasiva/multiqr--1pharmahackathon.git
@@ -81,6 +83,7 @@ Note :  The annotations can be found in src/data/labels/
 Stage 1 : QR Code Detection using Yolov8
 
 1. Training the model
+   
    ```bash
    python train.py
    
@@ -123,7 +126,7 @@ Visualise the predicted bounding boxes for further verification and model fine-t
 Stage 2 :  Decoding the detected QR codes
 
      ```bash
-    python decode_qr.py --input src/data/images/test --weights src/models/best.pt --output outputs/submission_decoding_2.json --conf 0.5
+    python decode.py --input src/data/images/test --weights src/models/best.pt --output outputs/submission_decoding_2.json --conf 0.5
 
 Produces submission_decoding_2.json in format:
 [
@@ -162,7 +165,7 @@ To reproduce submission files run the following commands:
 - Decoding relies only on OpenCV only.
 
 ## Author
-- Sharmitha Siva  
+- Sharmitha S
 
 
 
