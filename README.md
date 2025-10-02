@@ -33,8 +33,8 @@ multiqr-hackathon/
     │   │   └── test/
     │   └── data.yaml
     │
-    ├── models/
-    │   └── best.pt
+    └── models/
+        └── best.pt
 
 
 
