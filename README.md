@@ -5,38 +5,38 @@ This repository contains a solution for detecting multiple QR codes on medicine 
 This project is built to comply with the hackathon submission requirements.
 
 ---
-
-## Repository Structure
-multiqr-hackathon/
-│
-├── README.md
-├── requirements.txt
-├── train.py
-├── infer.py
-├── evaluate.py
-├── visualise.py
-├── decode.py
-│
-├── outputs/
-│   ├── submission_detection_1.json
-│   └── submission_decoding_2.json
-│
-└── src/
-    ├── data/
-    │   ├── images/
-    │   │   ├── train/
-    │   │   ├── val/
-    │   │   └── test/
-    │   ├── labels/
-    │   │   ├── train/
-    │   │   ├── val/
-    │   │   └── test/
-    │   └── data.yaml
+    ```
+    ## Repository Structure
+    multiqr-hackathon/
     │
-    └── models/
-        └── best.pt
-
-
+    ├── README.md
+    ├── requirements.txt
+    ├── train.py
+    ├── infer.py
+    ├── evaluate.py
+    ├── visualise.py
+    ├── decode.py
+    │
+    ├── outputs/
+    │   ├── submission_detection_1.json
+    │   └── submission_decoding_2.json
+    │
+    └── src/
+        ├── data/
+        │   ├── images/
+        │   │   ├── train/
+        │   │   ├── val/
+        │   │   └── test/
+        │   ├── labels/
+        │   │   ├── train/
+        │   │   ├── val/
+        │   │   └── test/
+        │   └── data.yaml
+        │
+        └── models/
+            └── best.pt
+    
+    
 
 data.yaml : config file that contains datat information like path, classes etc.
 
