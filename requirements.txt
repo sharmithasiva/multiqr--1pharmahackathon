@@ -1,0 +1,7 @@
+python>=3.8
+numpy==1.24.4
+opencv-python
+lxml
+pillow
+tqdm
+ultralytics>=8.0.0
