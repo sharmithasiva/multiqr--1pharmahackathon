@@ -6,37 +6,36 @@ This project is built to comply with the hackathon submission requirements.
 
 ---
     ```
-    ## Repository Structure
     multiqr-hackathon/
     │
-    ├── README.md
-    ├── requirements.txt
-    ├── train.py
-    ├── infer.py
-    ├── evaluate.py
-    ├── visualise.py
-    ├── decode.py
+    ├── README.md                        # Setup & usage instructions
+    ├── requirements.txt                 # Python dependencies
+    ├── train.py                         # YOLOv8 training script
+    ├── infer.py                         # Inference script (Stage 1 → outputs JSON)
+    ├── evaluate.py                      # Evaluate model predictions (optional)
+    ├── visualise.py                     # Visualise predicted bounding boxes
+    ├── decode.py                        # Decoding & classification (Stage 2)
     │
-    ├── outputs/
-    │   ├── submission_detection_1.json
-    │   └── submission_decoding_2.json
+    ├── outputs/                         
+    │   ├── submission_detection_1.json  # Output file (Stage 1)
+    │   └── submission_decoding_2.json   # Output file (Stage 2, bonus)
     │
     └── src/
         ├── data/
         │   ├── images/
-        │   │   ├── train/
-        │   │   ├── val/
-        │   │   └── test/
+        │   │   ├── train/               # Training images
+        │   │   ├── val/                 # Validation images
+        │   │   └── test/                # Test images
         │   ├── labels/
-        │   │   ├── train/
-        │   │   ├── val/
-        │   │   └── test/
-        │   └── data.yaml
+        │   │   ├── train/               # YOLO .txt annotations for train
+        │   │   ├── val/                 # YOLO .txt annotations for val
+        │   │   └── test/                # YOLO .txt annotations for test
+        │   └── data.yaml                # Dataset config (paths, classes)
         │
-        └── models/
-            └── best.pt
+        ├── models/                      
+        │   └── best.pt                  # Trained YOLO model weights
     
-    
+        
 
 data.yaml : config file that contains datat information like path, classes etc.
 
