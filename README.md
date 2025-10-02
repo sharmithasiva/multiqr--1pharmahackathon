@@ -39,14 +39,15 @@ This project is built to comply with the hackathon submission requirements.
 
 data.yaml : config file that contains datat information like path, classes etc.
 
-path: ./src/data   
-
-train: images/train
-val: images/val
-test: src/data/images/test
-
-nc: 1   
-names: ["qr"]
+    ```
+    path: ./src/data   
+    
+    train: images/train
+    val: images/val
+    test: src/data/images/test
+    
+    nc: 1   
+    names: ["qr"]
 
 
 ## Annotation Workflow
@@ -67,11 +68,13 @@ Note :  The annotations can be found in src/data/labels/
 ## Setup Instructions
 
 1. Clone the repository
+   
    ```bash
    git clone https://github.com/sharmithasiva/multiqr--1pharmahackathon.git
    cd multiqr-hackathon
 
-2. Install dependencies
+3. Install dependencies
+   
    ```bash
    pip install -r requirements.txt
 
@@ -80,13 +83,17 @@ Stage 1 : QR Code Detection using Yolov8
 1. Training the model
    ```bash
    python train.py
+   
 - Outputs (weights) will be saved in src/models/best.pt.
 - Change training parameters in train.py if needed (epochs, batch size, etc).
 
 2. Inference
+   
    ```bash
    python infer.py --input src/data/images/test/ --output outputs/submission_detection_1.json --model src/models/best.pt --conf 0.5
+   
 - Generates submission_detection_1.json in the specified format
+  
   [
   {
     "image_id": "img001",
@@ -98,8 +105,10 @@ Stage 1 : QR Code Detection using Yolov8
 ]
 
 3. Evaluation and Visualising Model Predictions (Optional)
+   
    ```bash
    python evaluate.py
+   
 - Outputs:
   True Positives (TP), False Positives (FP), False Negatives (FN)
   Precision & Recall
@@ -108,6 +117,7 @@ Stage 1 : QR Code Detection using Yolov8
 
   ```bash
    python visualise.py
+  
 Visualise the predicted bounding boxes for further verification and model fine-tuning.
 
 Stage 2 :  Decoding the detected QR codes
@@ -151,7 +161,8 @@ To reproduce submission files run the following commands:
 - No external APIs were used for detection or decoding.
 - Decoding relies only on OpenCV only.
 
-
+## Author
+- Sharmitha Siva  
 
 
 
