@@ -26,11 +26,13 @@ This project is built to comply with the hackathon submission requirements.
         │   │   ├── train/               # Training images
         │   │   ├── val/                 # Validation images
         │   │   └── test/                # Test images
+            └── data.yaml                # Dataset config (paths, classes)
+            
         │   ├── labels/
         │   │   ├── train/               # YOLO .txt annotations for train
         │   │   ├── val/                 # YOLO .txt annotations for val
         │   │   └── test/                # YOLO .txt annotations for test
-        │   └── data.yaml                # Dataset config (paths, classes)
+        │   
         │
         ├── models/                      
         │   └── best.pt                  # Trained YOLO model weights
