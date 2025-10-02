@@ -80,20 +80,20 @@ Note :  The annotations can be found in src/data/labels/
    ```bash
    pip install -r requirements.txt
 
-Stage 1 : QR Code Detection using Yolov8
+## Stage 1 : QR Code Detection using Yolov8
 
-1. Training the model
+**1. Training the model**
    
-   ```bash
-   python train.py
+    ```bash
+    python train.py
    
 - Outputs (weights) will be saved in src/models/best.pt.
 - Change training parameters in train.py if needed (epochs, batch size, etc).
 
-2. Inference
+**2. Inference**
    
-   ```bash
-   python infer.py --input src/data/images/test/ --output outputs/submission_detection_1.json --model src/models/best.pt --conf 0.5
+    ```bash
+    python infer.py --input src/data/images/test/ --output outputs/submission_detection_1.json --model src/models/best.pt --conf 0.5
    
 - Generates submission_detection_1.json in the specified format
   
@@ -107,10 +107,10 @@ Stage 1 : QR Code Detection using Yolov8
   }
 ]
 
-3. Evaluation and Visualising Model Predictions (Optional)
+**3. Evaluation and Visualising Model Predictions (Optional)**
    
-   ```bash
-   python evaluate.py
+    ```bash
+    python evaluate.py
    
 - Outputs:
   True Positives (TP), False Positives (FP), False Negatives (FN)
@@ -123,7 +123,7 @@ Stage 1 : QR Code Detection using Yolov8
   
 Visualise the predicted bounding boxes for further verification and model fine-tuning.
 
-Stage 2 :  Decoding the detected QR codes
+## Stage 2 :  Decoding the detected QR codes
 
      ```bash
     python decode.py --input src/data/images/test --weights src/models/best.pt --output outputs/submission_decoding_2.json --conf 0.5
